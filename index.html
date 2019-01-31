@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Vue</title>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+    <div id="app-3">
+        <span v-if="seen">Сейчас меня видно</span>
+    </div>
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Перевернуть сообщение</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
