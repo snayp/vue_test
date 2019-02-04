@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="index.css">
     <title>Vue</title>
 </head>
@@ -22,6 +23,32 @@
         <p>{{ message }}</p>
         <input v-model="message">
     </div>
+
+    <div id="app-7">
+        <h1>Bitcoin Price Index</h1>
+        <div
+        v-for="currency in info"
+        class="currency">
+            {{ currency.description }}:
+        <span class="lighten">
+            <span v-html="currency.symbol"></span>{{ currency.rate_float | currencydecimal }}
+        </span>
+        </div>
+    </div>
+    <div id="app-8">
+    {{ info }}
+    </div>
+    <!--<div id="app-8">-->
+        <!--<h1>Price Index</h1>-->
+        <!--<div-->
+        <!--v-for="currency in info"-->
+        <!--class="currency">-->
+            <!--{{ currency.description }}:-->
+        <!--<span class="lighten">-->
+            <!--<span v-html="currency.symbol"></span>{{ coinmarketcap.coin.price_usd | currencydecimal }}-->
+        <!--</span>-->
+        <!--</div>-->
+    <!--</div>-->
     <script src="index.js"></script>
 </body>
 </html>
